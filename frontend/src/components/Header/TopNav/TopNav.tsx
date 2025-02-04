@@ -1,5 +1,5 @@
 import * as Icon from '@phosphor-icons/react/dist/ssr'
-
+import Link from 'next/link'
 const TopNav = () => {
   return (
     <>
@@ -14,7 +14,22 @@ const TopNav = () => {
               <Icon.Envelope className='text-white text-xl' />
                 <span className='ml-2 caption1 text-white'>
                   spport@easylearningbd.com</span>
+            </div>
+          </div>
+          <div className='right-block flex items-center gap-5'>
+            <div className='line h-6 w-px bg-grey max-sm:hidden'>
 
+            </div>
+            <div className='list-social flex items-center gap-2.5 max-sm:hidden'>
+              <Link className='item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center' href="https://www.facebook.com/" target='_blank'>
+              <Icon.FacebookLogo className="text-white text-base" />
+              </Link>
+              <Link className='item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center' href="https://www.linkedin.com/" target='_blank'>
+              <Icon.LinkedinLogo className="text-white text-base" />
+              </Link>
+              <Link className='item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center' href="https://www.twitter.com/" target='_blank'>
+              <Icon.TwitterLogo className="text-white text-base" />
+              </Link>
             </div>
           </div>
         </div>
