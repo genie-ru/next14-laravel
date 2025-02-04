@@ -57,3 +57,10 @@
         ```bash
         docker compose exec backend php artisan migrate
         ```
+      - **データベースのマイグレーション**
+      
+      - **npmのパッケージインストール**
+      
+      ```bash
+      docker compose exec front npm install @phosphor-icons/react animate.css axios framer-motion react-fast-marquee react-paginate react-slick sass slick-carousel swiper
+      ```
