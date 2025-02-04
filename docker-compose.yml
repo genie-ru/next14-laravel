@@ -1,8 +1,24 @@
 services:
-  app:
+  front:
     build:
       context: .
-      dockerfile: ./docker/app/Dockerfile
+      dockerfile: ./docker/frontend/Dockerfile
+    tty: true
+    ports:
+      - 3000:3000
+    stdin_open: true
+    # プロジェクトディレクトリにマウントする
+    volumes:
+      - ./frontend:/frontend
+    working_dir: /frontend
+    environment:
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm i && npm run dev"
+    
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
     volumes:
       - ./backend:/backend
     ports:
@@ -15,7 +31,7 @@ services:
     ports:
       - 8080:80
     depends_on:
-      - app
+      - backend
     volumes:
       - ./backend:/backend
 
