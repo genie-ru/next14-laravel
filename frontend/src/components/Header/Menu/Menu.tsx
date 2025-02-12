@@ -1,7 +1,7 @@
 const Menu = () => {
   return (
     <div>
-      Menu
+      Menu1
     </div>
   );
 };
